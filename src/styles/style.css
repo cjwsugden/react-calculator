@@ -1,0 +1,68 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(to bottom, #cc2b5e, #653a88);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.git-logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 3rem;
+}
+
+.calc{
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto)repeat(5, 6rem);
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.calc > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px white solid;
+    background-color: rgba(255, 255, 255, 0.75);
+    outline: none;
+}
+
+.calc > button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.calc > button:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.curr-operand {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2.5rem;
+}
